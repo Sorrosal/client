@@ -1,11 +1,24 @@
-import React from 'react'
+import React from 'react';
+import { Icon } from "../../assets";
+import "./AdminLayout.scss";
+import { AdminMenu, Logout } from "../../components/Admin/AdminLayout";
 
 export function AdminLayout(props) {
     const { children } = props;
   return (
-    <div>
-      <h2>Se esta usando el admin layout</h2>
-      {children}
+    <div className='admin-layout'>
+      <div className='admin-layout__left'>
+        <Icon.LogoWhite className='logo'/>
+        <AdminMenu />
+      </div>
+      <div className='admin-layout__right'>
+        <div className='admin-layout__right-header'>
+          <Logout/>
+        </div>
+        <div className='admin-layout__right-content'>
+          {children}
+        </div>
+      </div>
     </div>
   )
 }
