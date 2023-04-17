@@ -59,7 +59,7 @@ export function AuthProvider(props) {
         authController.removeTokens();
     }
     const data = {
-        accesToken: token,
+        accessToken: token,
         user,
         login,
         logout,
